@@ -1,21 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Última versão CSS compilada e minificada -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Tema opcional -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<!-- Última versão JavaScript compilada e minificada -->
-
-    <title>Queremos conhecer Você!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./root.css" />
+    <!-- Tema opcional -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Última versão JavaScript compilada e minificada -->
+    <title>Chama Conection</title>
 </head>
+
 <body>
-    
+    <div class="principal">
+        <img src="./img/chama.jpg" alt="Chama Church" class="imgprincipal">
+    </div>
+    <div class="container">
+        <h3>Queremos conhecer você!</h3>
+
+        <form>
+
+            <div class="form-group ">
+                <label for="Date" style="margin: 5px;">Data</label>
+                <input type="date" class="form-control" id="Date" aria-describedby="Date" placeholder="Data de hoje"
+                    required style="width: 50%;">
+            </div>
+            <div class="form-group" >
+                <label for="horaculto" style="margin: 5px;">Horário do Culto</label>
+                <select id="culto" class="form-control" style="width: 50%;">
+                    <option selected>Selecionar...</option>
+                    <option>Primeiro 15hrs</option>
+                    <option>Segundo 17hrs</option>
+                    <option>Terceiro 19hrs</option>
+                </select>
+            </div>
+
+            <div class="form-group ">
+                <label for="Nome" style="margin: 5px;">Nome</label>
+                <input type="text" class="form-control" style="margin: 5px;width: 90%;" id="nome" placeholder="Seu Nome..." required>
+            </div>
+
+            <button type="submit" class="btn btn-warning">Enviar</button>
+        </form>
+
+
+    </div>
+
 </body>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<!-- jQuery (obrigatório para plugins JavaScript do Bootstrap) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+
 </html>

@@ -1,0 +1,35 @@
+body{
+    background-color: black;
+}
+.principal img{
+    height: 100px;
+    width: 100px;
+    margin: 20px auto;
+    border-radius: 100%;
+}
+.principal {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.container h3{
+    text-align: center;
+    color: rgb(255, 126, 51);
+    margin-bottom: 20px;
+}
+
+.form-group label{
+    align-items: center;
+    color: rgb(255, 126, 51);
+    float: left;
+}
+
+form{
+    background-color: rgb(39, 38, 38);
+    border-radius: 5%;
+    padding: 5px;
+}
+form button{
+    margin: 0 auto;
+    width: 100%;
+}
