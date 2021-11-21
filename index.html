@@ -5,14 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Última versão CSS compilada e minificada -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="./root.css" />
-    <!-- Tema opcional -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <!-- Última versão JavaScript compilada e minificada -->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/bootstrap-select.min.css" rel="stylesheet">
+    <link href="css/root.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./img/chama.jpg" />
     <title>Chama Conection</title>
 </head>
 
@@ -23,41 +19,292 @@
     <div class="container">
         <h3>Queremos conhecer você!</h3>
 
-        <form>
+        <form id="form">
 
-            <div class="form-group ">
-                <label for="Date" style="margin: 5px;">Data</label>
-                <input type="date" class="form-control" id="Date" aria-describedby="Date" placeholder="Data de hoje"
-                    required style="width: 50%;">
-            </div>
-            <div class="form-group" >
-                <label for="horaculto" style="margin: 5px;">Horário do Culto</label>
-                <select id="culto" class="form-control" style="width: 50%;">
-                    <option selected>Selecionar...</option>
-                    <option>Primeiro 15hrs</option>
-                    <option>Segundo 17hrs</option>
-                    <option>Terceiro 19hrs</option>
-                </select>
+            <div class="container-fluid">
+
+
+
+                <div class="column">
+                    <div class="d-flex flex-wrap">
+
+                        <div class="form-group form-group col-10 col-md-4 col-lg-4 col-sm-6 col-xl-6">
+                            <label for="Date" style="margin: 5px;">Data</label>
+                            <input type="date" class="form-control" id="Date" aria-describedby="Date"
+                                placeholder="Data de hoje" required>
+                        </div>
+
+
+                        <div class="form-group col-10 col-md-6 col-lg-4 col-sm-6 col-xl-6">
+                            <label for="horaculto" style="margin: 5px;">Horário do Culto</label>
+                            <select id="culto" class="form-control">
+                                <option selected>Selecionar...</option>
+                                <option>Primeiro 17hrs</option>
+                                <option>Segundo 19hrs</option>
+                                <option>Jovens Strong</option>
+                                <option>Culto da Família</option>
+                                <option>Culto AME</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group col-12 ">
+                        <label for="Nome" style="margin: 5px;">Voluntário</label>
+                        <input type="text" class="form-control" style="margin: 5px;" id="voluntario"
+                            placeholder="Nome do voluntário..." required>
+                    </div>
+
+                    <div class="form-group col-12 ">
+                        <label for="Nome" style="margin: 5px;">Nome</label>
+                        <input type="text" class="form-control" style="margin: 5px;" id="nome"
+                            placeholder="Nome visitante..." required>
+                    </div>
+
+
+                    <div class="d-flex flex-wrap">
+                        <div class="form-group col-10 col-md-6 col-lg-6 col-sm-6 col-xl-6">
+                            <label for="horaculto" style="margin: 5px;">Sexo</label>
+                            <select id="sexo" class="form-control">
+                                <option selected>Selecionar...</option>
+                                <option>Masculino</option>
+                                <option>Feminino</option>
+                            </select>
+                        </div>
+                        <div class=" form-group col-10 col-md-6 col-lg-6 col-sm-6 col-xl-6">
+                            <label for="Date" style="margin: 5px;">Idade</label>
+                            <input type="number" class="form-control" id="idade" aria-describedby="idade"
+                                placeholder="Sua Idade" required>
+                        </div>
+
+                        <div class="form-group col-10 col-md-6 col-lg-6 col-sm-6 col-xl-6">
+                            <label for="horaculto" style="margin: 5px;">Estado Civil</label>
+                            <select id="civil" class="form-control">
+                                <option selected>Selecionar...</option>
+                                <option>Solteiro</option>
+                                <option>Casado</option>
+                                <option>Divorciado</option>
+                                <option>Viúvo</option>
+                            </select>
+                        </div>
+                        <div class=" form-group col-10 col-md-6 col-lg-6 col-sm-6 col-xl-6">
+                            <label for="Date" style="margin: 5px;">Telefone</label>
+                            <input type="text" class="form-control" placeholder="Ex.: (00) 00000-0000"
+                                data-mask="(00) 00000-0000" maxlength="15" autocomplete="off" id="phone">
+                        </div>
+
+                    </div>
+
+                    <div class="form-group col-12 ">
+                        <label for="Nome" style="margin: 5px;">Bairro</label>
+                        <input type="text" class="form-control" style="margin: 5px;" id="bairro" name="bairro"
+                            placeholder="Seu Bairro..." required>
+                    </div>
+
+                    <div class=" form-group col-10" id="radiosinputs">
+                        <label style="margin: 5px; font-size: 20px;">Como conheceu a igreja?</label></br>
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                value="1">
+                            <label class="form-check-label" for="inlineRadio1">Instagram<br>Facebook</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                value="2">
+                            <label class="form-check-label" for="inlineRadio2">Whatsapp</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                                value="3">
+                            <label class="form-check-label" for="inlineRadio3">Youtube </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4"
+                                value="4">
+                            <label class="form-check-label" for="inlineRadio3">Passei em frente a igreja </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio7"
+                                value="5">
+                            <label class="form-check-label" for="inlineRadio3">Eu fui convidado </label>
+
+                        </div>
+                    </div>
+
+                    <div class="col-10">
+                        <input type="text" class="form-control" style="margin-bottom: 5px; display: none;" id="convidou"
+                            name="convidou" placeholder="Quem convidou?" required>
+                    </div>
+
+                    <div class="form-group col-10 col-md-6 col-lg-6 col-sm-6 col-xl-6">
+                        <label for="horaculto" style="margin: 5px;">Você frequenta alguma igreja?</label>
+                        <select id="algumaigreja" name="algumaigreja" class="form-control">
+                            <option selected>Selecionar...</option>
+                            <option value="1">SIM</option>
+                            <option value="2">NÃO</option>
+                        </select>
+                    </div>
+
+                    <div class="col-10">
+                        <input type="text" class="form-control" style="margin-bottom: 5px; display: none;"
+                            id="qualigreja" name="qualigreja" placeholder="Qual igreja?" required>
+                    </div>
+                    <div class="form-group col-10 col-md-6 col-lg-6 col-sm-6 col-xl-6">
+                        <label for="horaculto" style="margin: 5px;">Entreguei-me para Jesus hoje:</label>
+                        <select id="aceitou" class="form-control">
+                            <option selected>Selecionar...</option>
+                            <option>SIM</option>
+                            <option>NÃO</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-10 col-md-6 col-lg-6 col-sm-6 col-xl-6">
+                        <label for="horaculto" style="margin: 5px;">Estou apenas visitando a Chama Church:</label>
+                        <select id="visita" class="form-control">
+                            <option selected>Selecionar...</option>
+                            <option>SIM</option>
+                            <option>NÃO</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-10 col-md-6 col-lg-6 col-sm-6 col-xl-6">
+                        <label for="horaculto" style="margin: 5px;">Quero me envolver mais na Chama Church:</label>
+                        <select id="queromais" name="civil" class="form-control">
+                            <option selected>Selecionar...</option>
+                            <option>SIM</option>
+                            <option>NÃO</option>
+                        </select>
+                    </div>
+
+
+                    <!--- Segunda Etapa-->
+
+                    <h3>Meu próximo passo é:</h3>
+
+                    <div class="form-check ">
+                        <input class="form-check-input" type="checkbox" value="GR" name="defaultCheck1">
+                        <img src="./img/GR.jpg" />
+                        <label class="form-check-label" for="defaultCheck1">
+                            Quero participar de um Grupo de Relacionamento
+                        </label>
+                    </div>
+                    <div class="form-check ">
+                        <input class="form-check-input" type="checkbox" value="SH" name="defaultCheck1">
+                        <img src="./img/SH.jpg" />
+                        <label class="form-check-label" for="defaultCheck1">
+                            Quero Agendar uma Sky House
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="PDC" name="defaultCheck1">
+                        <img src="./img/PDC.jpg" />
+                        <label class="form-check-label" for="defaultCheck1">
+                            Participar do Por Dentro da Chama
+                        </label>
+                    </div>
+                    <div class="form-check ">
+                        <input class="form-check-input" type="checkbox" value="ND" name="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                            Nenhum
+                        </label>
+                    </div>
+
+
+                    <button type="button"
+                        class="btn disable btn-warning col-10 col-md-6 col-lg-6 col-sm-8 col-xl-6 d-flex justify-content-center "
+                        id="envio">Enviar</button>
+
+                </div>
+
             </div>
 
-            <div class="form-group ">
-                <label for="Nome" style="margin: 5px;">Nome</label>
-                <input type="text" class="form-control" style="margin: 5px;width: 90%;" id="nome" placeholder="Seu Nome..." required>
-            </div>
 
-            <button type="submit" class="btn btn-warning">Enviar</button>
         </form>
 
 
-    </div>
 
+
+
+    </div>
+    <div class="final">
+        <img src="./img/chama.jpg" alt="Chama Church" class="imgprincipal">
+    </div>
+    <h5>CHAMA CHURCH - MINHA IGREJA, MINHA FAMÍLIA</h5>
+    <p>Av. Bispo Pedro Massa, nº 9 - Cidade Nova 2<br>Manaus-AM</p>
+
+    <footer class="d-flex flex-wrap justify-content-between">
+        <div>
+            <img
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDQ2MS4wMDEgNDYxLjAwMSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgY2xhc3M9IiI+PGNpcmNsZSByPSIyMzAuNTAwNSIgY3g9IjIzMC41MDA1IiBjeT0iMjMwLjUwMDUiIGZpbGw9IiMwMDAwMDAiIHNoYXBlPSJjaXJjbGUiPjwvY2lyY2xlPjxnIHRyYW5zZm9ybT0ibWF0cml4KDAuNywwLDAsMC43LDY5LjE1MDE1NTYzOTY0ODQ2LDY5LjE1MDI5OTgzNTIwNTA5KSI+CjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3R5bGU9IiIgZD0iTTM2NS4yNTcsNjcuMzkzSDk1Ljc0NEM0Mi44NjYsNjcuMzkzLDAsMTEwLjI1OSwwLDE2My4xMzd2MTM0LjcyOCAgYzAsNTIuODc4LDQyLjg2Niw5NS43NDQsOTUuNzQ0LDk1Ljc0NGgyNjkuNTEzYzUyLjg3OCwwLDk1Ljc0NC00Mi44NjYsOTUuNzQ0LTk1Ljc0NFYxNjMuMTM3ICBDNDYxLjAwMSwxMTAuMjU5LDQxOC4xMzUsNjcuMzkzLDM2NS4yNTcsNjcuMzkzeiBNMzAwLjUwNiwyMzcuMDU2bC0xMjYuMDYsNjAuMTIzYy0zLjM1OSwxLjYwMi03LjIzOS0wLjg0Ny03LjIzOS00LjU2OFYxNjguNjA3ICBjMC0zLjc3NCwzLjk4Mi02LjIyLDcuMzQ4LTQuNTE0bDEyNi4wNiw2My44ODFDMzA0LjM2MywyMjkuODczLDMwNC4yOTgsMjM1LjI0OCwzMDAuNTA2LDIzNy4wNTZ6IiBmaWxsPSIjZmY4MzAwIiBkYXRhLW9yaWdpbmFsPSIjZjYxYzBkIiBjbGFzcz0iIj48L3BhdGg+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjwvZz48L3N2Zz4=" />
+            <label>/Chama Church</label>
+        </div>
+        <div>
+            <img
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnIHRyYW5zZm9ybT0ibWF0cml4KDAuNywwLDAsMC42OTk5OTk5OTk5OTk5OTk4LDc2LjgwMDAwMDAwMDAwMDAxLDc2LjgwMDAwMDAwMDAwMDA0KSI+PHBhdGggeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBkPSJtNDgzLjczODI4MSAwaC00NTUuNWMtMTUuNTk3NjU2LjAwNzgxMjUtMjguMjQyMTg3MjUgMTIuNjYwMTU2LTI4LjIzODI4MSAyOC4yNjE3MTl2NDU1LjVjLjAwNzgxMjUgMTUuNTk3NjU2IDEyLjY2MDE1NiAyOC4yNDIxODcgMjguMjYxNzE5IDI4LjIzODI4MWg0NTUuNDc2NTYyYzE1LjYwNTQ2OS4wMDM5MDYgMjguMjU3ODEzLTEyLjY0NDUzMSAyOC4yNjE3MTktMjguMjUgMC0uMDAzOTA2IDAtLjAwNzgxMiAwLS4wMTE3MTl2LTQ1NS41Yy0uMDA3ODEyLTE1LjU5NzY1Ni0xMi42NjAxNTYtMjguMjQyMTg3MjUtMjguMjYxNzE5LTI4LjIzODI4MXptMCAwIiBmaWxsPSIjZmY4MzAwIiBkYXRhLW9yaWdpbmFsPSIjNDI2N2IyIiBzdHlsZT0iIiBjbGFzcz0iIj48L3BhdGg+PHBhdGggeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBkPSJtMzUzLjUgNTEydi0xOThoNjYuNzVsMTAtNzcuNWgtNzYuNzV2LTQ5LjM1OTM3NWMwLTIyLjM4NjcxOSA2LjIxNDg0NC0zNy42NDA2MjUgMzguMzE2NDA2LTM3LjY0MDYyNWg0MC42ODM1OTR2LTY5LjEyODkwNmMtNy4wNzgxMjUtLjk0MTQwNi0zMS4zNjMyODEtMy4wNDY4NzUtNTkuNjIxMDk0LTMuMDQ2ODc1LTU5IDAtOTkuMzc4OTA2IDM2LTk5LjM3ODkwNiAxMDIuMTQwNjI1djU3LjAzNTE1NmgtNjYuNXY3Ny41aDY2LjV2MTk4em0wIDAiIGZpbGw9IiMwMDAwMDAiIGRhdGEtb3JpZ2luYWw9IiNmZmZmZmYiIHN0eWxlPSIiIGNsYXNzPSIiPjwvcGF0aD48L2c+PC9zdmc+" />
+            <label>Chama Church</label>
+        </div>
+
+
+        <div>
+            <img
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDY4MiA2ODIuNjY2NjkiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnIHRyYW5zZm9ybT0ibWF0cml4KDAuNywwLDAsMC43LDk1LjYxNTYyNTAwMDAwMDAyLDk2KSI+PHBhdGggeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBkPSJtNTQ0LjM4NjcxOSA5My4wMDc4MTJjLTU5Ljg3NS01OS45NDUzMTItMTM5LjUwMzkwNy05Mi45NzI2NTU4LTIyNC4zMzU5MzgtOTMuMDA3ODEyLTE3NC44MDQ2ODcgMC0zMTcuMDcwMzEyIDE0Mi4yNjE3MTktMzE3LjE0MDYyNSAzMTcuMTEzMjgxLS4wMjM0MzcgNTUuODk0NTMxIDE0LjU3ODEyNSAxMTAuNDU3MDMxIDQyLjMzMjAzMiAxNTguNTUwNzgxbC00NC45OTIxODggMTY0LjMzNTkzOCAxNjguMTIxMDk0LTQ0LjEwMTU2MmM0Ni4zMjQyMTggMjUuMjY5NTMxIDk4LjQ3NjU2MiAzOC41ODU5MzcgMTUxLjU1MDc4MSAzOC42MDE1NjJoLjEzMjgxM2MxNzQuNzg1MTU2IDAgMzE3LjA2NjQwNi0xNDIuMjczNDM4IDMxNy4xMzI4MTItMzE3LjEzMjgxMi4wMzUxNTYtODQuNzQyMTg4LTMyLjkyMTg3NS0xNjQuNDE3OTY5LTkyLjgwMDc4MS0yMjQuMzU5Mzc2em0tMjI0LjMzNTkzOCA0ODcuOTMzNTk0aC0uMTA5Mzc1Yy00Ny4yOTY4NzUtLjAxOTUzMS05My42ODM1OTQtMTIuNzMwNDY4LTEzNC4xNjAxNTYtMzYuNzQyMTg3bC05LjYyMTA5NC01LjcxNDg0NC05OS43NjU2MjUgMjYuMTcxODc1IDI2LjYyODkwNy05Ny4yNjk1MzEtNi4yNjk1MzItOS45NzI2NTdjLTI2LjM4NjcxOC00MS45Njg3NS00MC4zMjAzMTItOTAuNDc2NTYyLTQwLjI5Njg3NS0xNDAuMjgxMjUuMDU0Njg4LTE0NS4zMzIwMzEgMTE4LjMwNDY4OC0yNjMuNTcwMzEyIDI2My42OTkyMTktMjYzLjU3MDMxMiA3MC40MDYyNS4wMjM0MzggMTM2LjU4OTg0NCAyNy40NzY1NjIgMTg2LjM1NTQ2OSA3Ny4zMDA3ODFzNzcuMTU2MjUgMTE2LjA1MDc4MSA3Ny4xMzI4MTIgMTg2LjQ4NDM3NWMtLjA2MjUgMTQ1LjM0Mzc1LTExOC4zMDQ2ODcgMjYzLjU5Mzc1LTI2My41OTM3NSAyNjMuNTkzNzV6bTE0NC41ODU5MzgtMTk3LjQxNzk2OGMtNy45MjE4NzUtMy45Njg3NS00Ni44ODI4MTMtMjMuMTMyODEzLTU0LjE0ODQzOC0yNS43ODEyNS03LjI1NzgxMi0yLjY0NDUzMi0xMi41NDY4NzUtMy45NjA5MzgtMTcuODI0MjE5IDMuOTY4NzUtNS4yODUxNTYgNy45Mjk2ODctMjAuNDY4NzUgMjUuNzgxMjUtMjUuMDkzNzUgMzEuMDY2NDA2LTQuNjI1IDUuMjg5MDYyLTkuMjQyMTg3IDUuOTUzMTI1LTE3LjE2Nzk2OCAxLjk4NDM3NS03LjkyNTc4Mi0zLjk2NDg0NC0zMy40NTcwMzItMTIuMzM1OTM4LTYzLjcyNjU2My0zOS4zMzIwMzEtMjMuNTU0Njg3LTIxLjAxMTcxOS0zOS40NTcwMzEtNDYuOTYwOTM4LTQ0LjA4MjAzMS01NC44OTA2MjYtNC42MTcxODgtNy45Mzc1LS4wMzkwNjItMTEuODEyNSAzLjQ3NjU2Mi0xNi4xNzE4NzQgOC41NzgxMjYtMTAuNjUyMzQ0IDE3LjE2Nzk2OS0yMS44MjAzMTMgMTkuODA4NTk0LTI3LjEwNTQ2OSAyLjY0NDUzMi01LjI4OTA2MyAxLjMyMDMxMy05LjkxNzk2OS0uNjY0MDYyLTEzLjg4MjgxMy0xLjk3NjU2My0zLjk2NDg0NC0xNy44MjQyMTktNDIuOTY4NzUtMjQuNDI1NzgyLTU4LjgzOTg0NC02LjQzNzUtMTUuNDQ1MzEyLTEyLjk2NDg0My0xMy4zNTkzNzQtMTcuODMyMDMxLTEzLjYwMTU2Mi00LjYxNzE4Ny0uMjMwNDY5LTkuOTAyMzQzLS4yNzczNDQtMTUuMTg3NS0uMjc3MzQ0LTUuMjgxMjUgMC0xMy44NjcxODcgMS45ODA0NjktMjEuMTMyODEyIDkuOTE3OTY5LTcuMjYxNzE5IDcuOTMzNTk0LTI3LjczMDQ2OSAyNy4xMDE1NjMtMjcuNzMwNDY5IDY2LjEwNTQ2OXMyOC4zOTQ1MzEgNzYuNjgzNTk0IDMyLjM1NTQ2OSA4MS45NzI2NTZjMy45NjA5MzcgNS4yODkwNjIgNTUuODc4OTA2IDg1LjMyODEyNSAxMzUuMzY3MTg3IDExOS42NDg0MzggMTguOTA2MjUgOC4xNzE4NzQgMzMuNjY0MDYzIDEzLjA0Mjk2OCA0NS4xNzU3ODIgMTYuNjk1MzEyIDE4Ljk4NDM3NCA2LjAzMTI1IDM2LjI1MzkwNiA1LjE3OTY4OCA0OS45MTAxNTYgMy4xNDA2MjUgMTUuMjI2NTYyLTIuMjc3MzQ0IDQ2Ljg3ODkwNi0xOS4xNzE4NzUgNTMuNDg4MjgxLTM3LjY3OTY4NyA2LjYwMTU2My0xOC41MTE3MTkgNi42MDE1NjMtMzQuMzc1IDQuNjE3MTg3LTM3LjY4MzU5NC0xLjk3NjU2Mi0zLjMwNDY4OC03LjI2MTcxOC01LjI4NTE1Ni0xNS4xODM1OTMtOS4yNTM5MDZ6bTAgMCIgZmlsbC1ydWxlPSJldmVub2RkIiBmaWxsPSIjZmY4MzAwIiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBzdHlsZT0iIiBjbGFzcz0iIj48L3BhdGg+PC9nPjwvc3ZnPg==" />
+            <label>92 98404-5474</label>
+        </div>
+        <div>
+            <img
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnN2Z2pzPSJodHRwOi8vc3ZnanMuY29tL3N2Z2pzIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgeD0iMCIgeT0iMCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnIHRyYW5zZm9ybT0ibWF0cml4KDAuNjAwMDAwMDAwMDAwMDAwMSwwLDAsMC42MDAwMDAwMDAwMDAwMDAxLDEwMi40MDAwMDAwMDAwMDAwMywxMDIuNDAwMDAwMDAwMDAwMDMpIj4KPGxpbmVhckdyYWRpZW50IHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgaWQ9IlNWR0lEXzFfIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9Ii00Ni4wMDQxIiB5MT0iNjM0LjEyMDgiIHgyPSItMzIuOTMzNCIgeTI9IjY0Ny4xOTE3IiBncmFkaWVudFRyYW5zZm9ybT0ibWF0cml4KDMyIDAgMCAtMzIgMTUxOSAyMDc1NykiPjxzdG9wIHN0b3Atb3BhY2l0eT0iMSIgc3RvcC1jb2xvcj0iIzQyNDQ1YSIgb2Zmc2V0PSIwIj48L3N0b3A+PHN0b3Agc3RvcC1vcGFjaXR5PSIxIiBzdG9wLWNvbG9yPSIjNDI0NDVhIiBvZmZzZXQ9IjAiPjwvc3RvcD48c3RvcCBzdG9wLW9wYWNpdHk9IjEiIHN0b3AtY29sb3I9IiNmZjgzMDAiIG9mZnNldD0iMCI+PC9zdG9wPjwvbGluZWFyR3JhZGllbnQ+CjxwYXRoIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3R5bGU9ImZpbGw6dXJsKCNTVkdJRF8xXyk7IiBkPSJNMzUyLDBIMTYwQzcxLjY0OCwwLDAsNzEuNjQ4LDAsMTYwdjE5MmMwLDg4LjM1Miw3MS42NDgsMTYwLDE2MCwxNjBoMTkyICBjODguMzUyLDAsMTYwLTcxLjY0OCwxNjAtMTYwVjE2MEM1MTIsNzEuNjQ4LDQ0MC4zNTIsMCwzNTIsMHogTTQ2NCwzNTJjMCw2MS43Ni01MC4yNCwxMTItMTEyLDExMkgxNjBjLTYxLjc2LDAtMTEyLTUwLjI0LTExMi0xMTIgIFYxNjBDNDgsOTguMjQsOTguMjQsNDgsMTYwLDQ4aDE5MmM2MS43NiwwLDExMiw1MC4yNCwxMTIsMTEyVjM1MnoiIGZpbGw9IiI+PC9wYXRoPgo8bGluZWFyR3JhZGllbnQgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBpZD0iU1ZHSURfMl8iIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iLTQyLjI5NzEiIHkxPSI2MzcuODI3OSIgeDI9Ii0zNi42NDA0IiB5Mj0iNjQzLjQ4NDYiIGdyYWRpZW50VHJhbnNmb3JtPSJtYXRyaXgoMzIgMCAwIC0zMiAxNTE5IDIwNzU3KSI+PHN0b3Agc3RvcC1vcGFjaXR5PSIxIiBzdG9wLWNvbG9yPSIjNDI0NDVhIiBvZmZzZXQ9IjAiPjwvc3RvcD48c3RvcCBzdG9wLW9wYWNpdHk9IjEiIHN0b3AtY29sb3I9IiM0MjQ0NWEiIG9mZnNldD0iMCI+PC9zdG9wPjxzdG9wIHN0b3Atb3BhY2l0eT0iMSIgc3RvcC1jb2xvcj0iI2ZmODMwMCIgb2Zmc2V0PSIwIj48L3N0b3A+PC9saW5lYXJHcmFkaWVudD4KPHBhdGggeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBzdHlsZT0iZmlsbDp1cmwoI1NWR0lEXzJfKTsiIGQ9Ik0yNTYsMTI4Yy03MC42ODgsMC0xMjgsNTcuMzEyLTEyOCwxMjhzNTcuMzEyLDEyOCwxMjgsMTI4czEyOC01Ny4zMTIsMTI4LTEyOCAgUzMyNi42ODgsMTI4LDI1NiwxMjh6IE0yNTYsMzM2Yy00NC4wOTYsMC04MC0zNS45MDQtODAtODBjMC00NC4xMjgsMzUuOTA0LTgwLDgwLTgwczgwLDM1Ljg3Miw4MCw4MCAgQzMzNiwzMDAuMDk2LDMwMC4wOTYsMzM2LDI1NiwzMzZ6IiBmaWxsPSIiPjwvcGF0aD4KPGxpbmVhckdyYWRpZW50IHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgaWQ9IlNWR0lEXzNfIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9Ii0zNS41NDU2IiB5MT0iNjQ0LjU3OTMiIHgyPSItMzQuNzkxOSIgeTI9IjY0NS4zMzMxIiBncmFkaWVudFRyYW5zZm9ybT0ibWF0cml4KDMyIDAgMCAtMzIgMTUxOSAyMDc1NykiPgoJPHN0b3Agb2Zmc2V0PSIwIiBzdHlsZT0ic3RvcC1jb2xvcjojRkZDMTA3Ij48L3N0b3A+Cgk8c3RvcCBvZmZzZXQ9IjAuNTA3IiBzdHlsZT0ic3RvcC1jb2xvcjojRjQ0MzM2Ij48L3N0b3A+Cgk8c3RvcCBvZmZzZXQ9IjAuOTkiIHN0eWxlPSJzdG9wLWNvbG9yOiM5QzI3QjAiPjwvc3RvcD4KPC9saW5lYXJHcmFkaWVudD4KPGNpcmNsZSB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHN0eWxlPSJmaWxsOnVybCgjU1ZHSURfM18pOyIgY3g9IjM5My42IiBjeT0iMTE4LjQiIHI9IjE3LjA1NiIgZmlsbD0iIj48L2NpcmNsZT4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPGcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPC9nPgo8ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8L2c+CjxnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjwvZz4KPC9nPjwvc3ZnPg==" />
+            <label>@chamachurch</label>
+        </div>
+
+    </footer>
+    <div id="part2">
+        <label id="txt6"><i class="material-icons tiny"> copyright</i> 2021 ChamaTech - All right reserved</label>
+    </div>
 </body>
 
 
 <!-- jQuery (obrigatório para plugins JavaScript do Bootstrap) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-    crossorigin="anonymous"></script>
+<!-- Bootstrap core JavaScript-->
+<script src="js/jquery/jquery-3.5.1.min.js"></script>
+<script type='text/javascript'
+    src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+<script src="js/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- <script src="vendor/popper/popper.min.js"></script> -->
+
+<script src="js/sweetalert/sweetalert2.all.min.js"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="js/jquery-easing/jquery.easing.min.js"></script>
+<script src="js/sweetalert/sweetalert2.all.min.js"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="js/sb-admin-2.min.js"></script>
+<script src="js/script.js"></script>
+<script>
+    $(document).ready(function () {
+        $(":input").inputmask();
+
+
+
+        $("#phone").inputmask({
+            mask: '(99) 99999-9999',
+            placeholder: ' ',
+            showMaskOnHover: false,
+            showMaskOnFocus: false,
+            onBeforePaste: function (pastedValue, opts) {
+                var processedValue = pastedValue;
+
+                //do something with it
+
+                return processedValue;
+            }
+        });
+    });
+
+
+</script>
+
 
 </html>
