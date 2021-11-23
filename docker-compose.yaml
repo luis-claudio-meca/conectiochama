@@ -8,3 +8,10 @@ services:
       - '80:80'
     volumes:
       - ./:/usr/src/myapp
+    networks:
+      - chama
+
+networks:
+  chama:
+    driver: bridge 
+    external: true 
